@@ -1,0 +1,11 @@
+#!/bin/sh
+df | grep -q /mnt/connect-files
+if test $? -ne 0 ; then
+mount.cifs //192.168.10.16/Connect$ /mnt/connect-files/ -o username=Backup,password=b7%Pn#vfOL@sts@5aI73p
+fi
+cp -u -r /mnt/connect-files/TM_DIARIO_`date +%Y`* /home/lawrence/tmp/ ;
+chown tomcat.tomcat /home/lawrence/tmp/* ;
+mv /home/lawrence/tmp/* /usr/local/lib/vivo-ab/files/input/ ;
+mv /mnt/connect-files/TM_* /mnt/connect-files/OLD/Excel/ ;
+
+

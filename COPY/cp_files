@@ -1,0 +1,15 @@
+#!/bin/sh
+ENV_CONNECT="connect-hom.navita.com.br"
+KEY="Infra-homolog.pem"
+FILE_DOWNLOADER="/data/downloads"
+CLIENTES="TIC_MOBILE;CLIMAZON"
+FOLDER=$(echo $CLIENTES | tr ";" "\n")
+
+##TransferFILES
+
+
+cd $FILE_DOWNLOADER
+
+scp -r -i /usr/local/scripts/$KEY $FOLDER  ubuntu@$ENV_CONNECT:/usr/local/tmp ;
+
+
