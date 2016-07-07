@@ -1,6 +1,6 @@
 #!/bin/sh
-ENV_CONNECT="connect-hom.navita.com.br"
-KEY="Infra-homolog.pem"
+ENV_CONNECT=""
+KEY=".pem"
 FILE_DOWNLOADER="/data/downloads"
 CLIENTES="TIC_MOBILE;CLIMAZON"
 FOLDER=$(echo $CLIENTES | tr ";" "\n")
